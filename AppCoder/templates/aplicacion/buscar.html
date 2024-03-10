@@ -1,0 +1,14 @@
+{% extends "aplicacion/index.html" %}
+
+{% block titulo %}
+<h1 class="mx-auto my-0 text-uppercase">Buscar clases</h1>
+{% endblock titulo %}
+
+{% block contenido %}
+<form action="{% url 'encontrar_clases' %}" method="get">
+    {% csrf_token %}
+    <p>Ingrese cadena a buscar: <input type="text" name="buscar" id="buscar" ></p>
+    <input type="submit" value="Buscar">
+</form>
+{% endblock contenido %}
+    
