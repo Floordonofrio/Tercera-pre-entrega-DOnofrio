@@ -5,4 +5,22 @@
 {% endblock titulo %}
 
 {% block contenido %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Profesor</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for c in clases  %}
+        <tr>
+            <td>{{ c.id }}</td>
+            <td>{{ c.nombre }}</td>
+            <td>{{ c.profesor }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
 {% endblock contenido %}

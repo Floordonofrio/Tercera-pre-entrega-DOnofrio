@@ -5,4 +5,28 @@
 {% endblock titulo %}
 
 {% block contenido %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Email</th>
+            <th>Entrega de ficha médica</th>
+            <th>Fecha de entrega de ficha médica</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for c in alumnos  %}
+        <tr>
+            <td>{{ c.id }}</td>
+            <td>{{ c.nombre }}</td>
+            <td>{{ c.apellido }}</td>
+            <td>{{ c.email }}</td>
+            <td>{{ c.fichaMedica }}</td>
+            <td>{{ c.entregaFicha }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
 {% endblock contenido %}
